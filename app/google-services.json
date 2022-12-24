@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "207267275765",
+    "project_id": "aplicativo-de-pedidos-53db1",
+    "storage_bucket": "aplicativo-de-pedidos-53db1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207267275765:android:2607680da74781832276bc",
+        "android_client_info": {
+          "package_name": "com.example.aplicativodepedidos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "207267275765-rr9s7pa684n4ubcpimbi8ifk494dcd9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1HlOE5wYon6Wo9Vz78IEOU_yeX-u3YUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "207267275765-rr9s7pa684n4ubcpimbi8ifk494dcd9q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
