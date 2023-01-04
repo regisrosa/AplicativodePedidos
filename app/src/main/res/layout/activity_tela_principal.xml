@@ -1,65 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".view.telaprincipal.TelaPrincipal">
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1E1E1"
+    tools:context=".view.telaprincipal.TelaPrincipal"
+    android:id="@+id/rl_1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/purple_200"
+        android:id="@+id/rl_2">
+
+        <TextView
+            android:id="@+id/tv_nome_cabecalho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_atualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:text="Atualizar / Corrigir"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/bt_deslogar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sair"
+            android:textSize="16sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/rl_2"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/customizacao_de_layout">
+
+        <CheckBox
+            android:id="@+id/check_box_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teste 1"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/bt_menos1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_toLeftOf="@id/tv_quantidade1"
+            android:layout_marginEnd="30dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_quantidade1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="28sp"
+            android:layout_toLeftOf="@id/bt_mais1"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            />
+
+        <TextView
+            android:id="@+id/bt_mais1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:text="+"
+            android:textSize="30sp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_4"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/rl_3"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/customizacao_de_layout">
+
+        <CheckBox
+            android:id="@+id/check_box_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teste 2"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/bt_menos2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_toLeftOf="@id/tv_quantidade2"
+            android:layout_marginEnd="30dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_quantidade2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="28sp"
+            android:layout_toLeftOf="@id/bt_mais2"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            />
+
+        <TextView
+            android:id="@+id/bt_mais2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="30sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_5"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/rl_4"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/customizacao_de_layout">
+
+        <CheckBox
+            android:id="@+id/check_box_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teste 3"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/bt_menos3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_toLeftOf="@id/tv_quantidade3"
+            android:layout_marginEnd="30dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_quantidade3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="28sp"
+            android:layout_toLeftOf="@id/bt_mais3"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            />
+
+        <TextView
+            android:id="@+id/bt_mais3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="30sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_6"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/rl_5"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/customizacao_de_layout">
+
+        <CheckBox
+            android:id="@+id/check_box_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teste 4"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/bt_menos4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_toLeftOf="@id/tv_quantidade4"
+            android:layout_marginEnd="30dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_quantidade4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="28sp"
+            android:layout_toLeftOf="@id/bt_mais4"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            />
+
+        <TextView
+            android:id="@+id/bt_mais4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="30sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            />
+
+
+    </RelativeLayout>
+
 
     <Button
-        android:id="@+id/bt_deslogar"
+        android:id="@+id/bt_fazer_pedido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Deslogar"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/bt_atualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Atualizar"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/bt_salvar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Salvar"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/bt_deletar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Deletar"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/bt_ler"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ler"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:textAllCaps="false"/>
-
-    <TextView
-        android:id="@+id/tv_ler_dados"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="18sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_below="@id/rl_6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:onClick="fazerPedido"
+        android:padding="15dp"
+        android:text="Fazer pedido"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
 
 
-</LinearLayout>
+</RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -25,6 +25,7 @@ class TelaLogin : AppCompatActivity() {
         binding = ActivityTelaLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         binding.btEntrar.setOnClickListener {
             val email = binding.etEmail.text.toString()
             val senha = binding.etSenha.text.toString()
@@ -41,8 +42,14 @@ class TelaLogin : AppCompatActivity() {
                             finish()
                         }
 
-                    }.addOnFailureListener {
-
+                    }.addOnFailureListener {exception ->
+                        val mensagemErro = when (exception) {
+                            is FirebaseAuthInvalidCredentialsException -> "Digite um email válido!"
+                            is FirebaseNetworkException -> "Sem internet!"
+                            else -> "Erro ao cadastrar usuário!"
+                        }
+                        Snackbar.make(it, mensagemErro, Snackbar.LENGTH_SHORT)
+                            .setBackgroundTint(Color.RED).show()
                     }
 
 

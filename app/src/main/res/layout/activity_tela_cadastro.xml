@@ -26,6 +26,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="100dp"/>
 
+
     <EditText
         android:id="@+id/et_email"
         android:layout_width="match_parent"
@@ -51,7 +52,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
         android:maxLines="1"
-        android:inputType="numberPassword"
+        android:inputType="textPassword"
         />
 
     <Button

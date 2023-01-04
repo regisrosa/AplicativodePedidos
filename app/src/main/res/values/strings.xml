@@ -3,4 +3,5 @@
     <string name="titulo_tela_cadastro">Cadastre-se</string>
     <string name="titulo_tela_login">Login do usuário</string>
     <string name="texto_criar_conta">Não tem uma conta? Crie agora mesmo!</string>
+    <string name="complete_seu_cadastro">Complete seu cadastro</string>
 </resources>

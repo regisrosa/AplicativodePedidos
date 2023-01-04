@@ -16,6 +16,7 @@
         android:background="@color/light_grey"
         tools:context=".view.telacadastro.TelaCadastro">
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +52,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
             android:maxLines="1"
-            android:inputType="numberPassword"
+            android:inputType="textPassword"
             />
 
         <Button

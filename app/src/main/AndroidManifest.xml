@@ -12,7 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicativoDePedidos">
         <activity
+            android:name=".view.tela_atualizar.TelaAtualizar"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".view.telaprincipal.TelaPrincipal"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".view.telacompletarcadastro.TelaCompletarCadastro"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
