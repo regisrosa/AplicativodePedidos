@@ -10,7 +10,7 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E1E1E1"
+    android:background="@color/cinza_claro"
     tools:context=".view.telaprincipal.TelaPrincipal"
     android:id="@+id/rl_1">
 
@@ -51,6 +51,7 @@
 
     </RelativeLayout>
 
+
     <RelativeLayout
         android:id="@+id/rl_3"
         android:layout_width="match_parent"
@@ -61,8 +62,8 @@
         android:layout_marginEnd="10dp"
         android:background="@drawable/customizacao_de_layout">
 
-        <CheckBox
-            android:id="@+id/check_box_1"
+        <TextView
+            android:id="@+id/tv_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Teste 1"
@@ -70,16 +71,18 @@
             android:layout_marginStart="10dp"
             android:layout_centerVertical="true" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_menos1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_remove_circle"
             android:textStyle="bold"
-            android:textSize="30sp"
             android:layout_toLeftOf="@id/tv_quantidade1"
             android:layout_marginEnd="30dp"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:textColor="@color/black" />
+
+
 
         <TextView
             android:id="@+id/tv_quantidade1"
@@ -87,20 +90,24 @@
             android:layout_height="wrap_content"
             android:text="0"
             android:textSize="28sp"
+            android:ems="1"
+            android:textAlignment="center"
             android:layout_toLeftOf="@id/bt_mais1"
             android:layout_centerVertical="true"
             android:layout_marginEnd="30dp"
             />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_mais1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
             android:layout_marginEnd="20dp"
-            android:text="+"
-            android:textSize="30sp" />
+            android:ems="1"
+            android:background="@drawable/ic_add_circle" />
+
+
 
 
     </RelativeLayout>
@@ -116,8 +123,8 @@
         android:layout_marginEnd="10dp"
         android:background="@drawable/customizacao_de_layout">
 
-        <CheckBox
-            android:id="@+id/check_box_2"
+        <TextView
+            android:id="@+id/tv_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Teste 2"
@@ -125,16 +132,17 @@
             android:layout_marginStart="10dp"
             android:layout_centerVertical="true" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_menos2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"
-            android:textStyle="bold"
-            android:textSize="30sp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_remove_circle"
             android:layout_toLeftOf="@id/tv_quantidade2"
             android:layout_marginEnd="30dp"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:textColor="@color/black" />
+
+
 
         <TextView
             android:id="@+id/tv_quantidade2"
@@ -142,21 +150,21 @@
             android:layout_height="wrap_content"
             android:text="0"
             android:textSize="28sp"
+            android:ems="1"
+            android:textAlignment="center"
             android:layout_toLeftOf="@id/bt_mais2"
             android:layout_centerVertical="true"
             android:layout_marginEnd="30dp"
             />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_mais2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+"
-            android:textSize="30sp"
-            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_add_circle"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="20dp"
-            />
+            android:layout_centerVertical="true"/>
 
 
     </RelativeLayout>
@@ -172,8 +180,8 @@
         android:layout_marginEnd="10dp"
         android:background="@drawable/customizacao_de_layout">
 
-        <CheckBox
-            android:id="@+id/check_box_3"
+        <TextView
+            android:id="@+id/tv_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Teste 3"
@@ -181,17 +189,17 @@
             android:layout_marginStart="10dp"
             android:layout_centerVertical="true" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_menos3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"
-            android:textStyle="bold"
-            android:textSize="30sp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_remove_circle"
             android:layout_toLeftOf="@id/tv_quantidade3"
             android:layout_marginEnd="30dp"
             android:layout_centerVertical="true"
-            />
+            android:textColor="@color/black" />
+
+
 
         <TextView
             android:id="@+id/tv_quantidade3"
@@ -199,21 +207,21 @@
             android:layout_height="wrap_content"
             android:text="0"
             android:textSize="28sp"
+            android:ems="1"
+            android:textAlignment="center"
             android:layout_toLeftOf="@id/bt_mais3"
             android:layout_centerVertical="true"
             android:layout_marginEnd="30dp"
             />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_mais3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+"
-            android:textSize="30sp"
-            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_add_circle"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="20dp"
-            />
+            android:layout_centerVertical="true"/>
 
 
     </RelativeLayout>
@@ -229,8 +237,8 @@
         android:layout_marginEnd="10dp"
         android:background="@drawable/customizacao_de_layout">
 
-        <CheckBox
-            android:id="@+id/check_box_4"
+        <TextView
+            android:id="@+id/tv_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Teste 4"
@@ -238,16 +246,16 @@
             android:layout_marginStart="10dp"
             android:layout_centerVertical="true" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_menos4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"
-            android:textStyle="bold"
-            android:textSize="30sp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_remove_circle"
             android:layout_toLeftOf="@id/tv_quantidade4"
             android:layout_marginEnd="30dp"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:textColor="@color/black" />
+
 
         <TextView
             android:id="@+id/tv_quantidade4"
@@ -255,21 +263,21 @@
             android:layout_height="wrap_content"
             android:text="0"
             android:textSize="28sp"
+            android:ems="1"
+            android:textAlignment="center"
             android:layout_toLeftOf="@id/bt_mais4"
             android:layout_centerVertical="true"
             android:layout_marginEnd="30dp"
             />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_mais4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+"
-            android:textSize="30sp"
-            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_add_circle"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="20dp"
-            />
+            android:layout_centerVertical="true"/>
 
 
     </RelativeLayout>

@@ -124,7 +124,7 @@ class TelaPrincipal : AppCompatActivity() {
                 binding.tvQuantidade1.setText(qtd1.toString())
             }
             if(qtd1 == 0){
-                binding.rl3.background.setTint(Color.LTGRAY)
+                binding.rl3.background.setTint(Color.rgb(225, 225,225))
             }
         }
 
@@ -140,7 +140,7 @@ class TelaPrincipal : AppCompatActivity() {
                 binding.tvQuantidade2.setText(qtd2.toString())
             }
             if (qtd2 == 0){
-                binding.rl4.background.setTint(Color.LTGRAY)
+                binding.rl4.background.setTint(Color.rgb(225, 225, 225))
             }
         }
 
@@ -156,7 +156,7 @@ class TelaPrincipal : AppCompatActivity() {
                 binding.tvQuantidade3.setText(qtd3.toString())
             }
             if (qtd3 == 0){
-                binding.rl5.background.setTint(Color.LTGRAY)
+                binding.rl5.background.setTint(Color.rgb(225, 225, 225))
             }
         }
 
@@ -172,7 +172,7 @@ class TelaPrincipal : AppCompatActivity() {
                 binding.tvQuantidade4.setText(qtd4.toString())
             }
             if (qtd4 == 0){
-                binding.rl6.background.setTint(Color.LTGRAY)
+                binding.rl6.background.setTint(Color.rgb(225, 225, 225))
             }
         }
 
