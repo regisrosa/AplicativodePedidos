@@ -1,5 +1,6 @@
 package com.example.aplicativodepedidos.view.telaprincipal
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import android.icu.util.LocaleData
@@ -8,6 +9,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TimePicker
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.aplicativodepedidos.R
 import com.example.aplicativodepedidos.databinding.ActivityTelaPrincipalBinding
 import com.example.aplicativodepedidos.view.tela_atualizar.TelaAtualizar
@@ -34,6 +36,7 @@ class TelaPrincipal : AppCompatActivity() {
     var qtd2 = 0
     var qtd3 = 0
     var qtd4 = 0
+
     //-------------------------------------
 
 
@@ -206,6 +209,7 @@ class TelaPrincipal : AppCompatActivity() {
         if (qtd4 > 0) {
             pedido.put("produto4", "Petra Qtd: $qtd4")
         }
+        
 
         val usuarioCorrente = auth.currentUser?.email.toString()
         val data = LocalDate.now().toString()
@@ -216,12 +220,25 @@ class TelaPrincipal : AppCompatActivity() {
 
         val dataPedido = "$formatoBrasileiro $hora"
 
-        db.collection("Clientes").document(usuarioCorrente)
-            .collection("Pedidos").document(dataPedido).set(pedido).addOnCompleteListener { pedido ->
-                if (pedido.isSuccessful){
-                    Toast.makeText(this, "Pedido realizado com sucesso!", Toast.LENGTH_LONG).show()
-                }
-            }
+        val sb = StringBuilder()
+        for (item in pedido){
+            sb.append(item.value + "\n")
+        }
+        AlertDialog.Builder(this)
+            .setTitle("Pedido $formatoBrasileiro")
+            .setMessage("Confirma seu pedido?\n$sb")
+            .setPositiveButton("sim", DialogInterface.OnClickListener { dialogInterface, i ->
+
+                db.collection("Clientes").document(usuarioCorrente)
+                    .collection("Pedidos").document(dataPedido).set(pedido).addOnCompleteListener { pedido ->
+                        if (pedido.isSuccessful){
+                            Toast.makeText(this, "Pedido realizado com sucesso!", Toast.LENGTH_LONG).show()
+                        }
+                    }
+
+            })
+            .setNegativeButton("não", null)
+            .create().show()
 
     }
 
